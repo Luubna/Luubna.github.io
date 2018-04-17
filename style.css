@@ -1,1 +1,410 @@
+body, html{
+    height: 100%;
+    min-width: 100%;
+    background-color:;
+}
 
+#container {
+    display: grid;
+    grid-template-columns: 80px 1fr 80px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 20px;
+}
+
+/* HEADER */
+
+.header {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    background-image: url(../assets/cloud.jpg);
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+}
+
+.caption { 
+    text-transform: uppercase;
+    font-size: 55px;
+    color: white;
+    position: absolute;
+    left: 0;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+}
+
+nav {
+    display: grid;
+    top: 50%;
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    bottom:0;
+    text-align: center;
+    list-style-type: none;
+    margin-bottom: 7em;
+    justify-content: center;
+}
+
+nav li {
+    float: left;
+    list-style-type: none;
+    padding-right: 90px;
+}
+nav li a {
+    display: block;
+    color: #eee5d1;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border: 1px solid #eee5d1;
+}
+
+
+li a:hover {
+   background-color:darkslategray; 
+}
+
+/* TIMELINE */
+
+.about {
+        grid-column: 1 / -1;
+    grid-row: 2 / 3;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 50px;
+   /*background-color: white;*/
+    display: flex;
+    align-content:center; 
+    
+}
+.fa{ 
+content:"\f1de";
+}
+.timeline {
+  list-style: none;
+  position: relative;
+  padding: 20px 0 20px;
+margin-top: 150px;
+}
+
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 4px;
+  background-color: black;
+  left: 50%;
+  margin-left: -1.5px;
+}
+
+.timeline > li {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+
+.timeline > li:after {
+  clear: both;
+}
+
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+
+.timeline > li:after {
+  clear: both;
+}
+
+.timeline > li > .timeline-panel {
+  width: 46%;
+  float: left;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+
+.timeline > li > .timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid black;
+  border-right: 0 solid black;
+  border-bottom: 15px solid transparent;
+  content: " ";
+}
+
+.timeline > li > .timeline-panel:after {
+  position: absolute;
+  top: 27px;
+  right: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid black;
+  border-right: 0 solid black;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
+
+.timeline > li > .timeline-badge {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.4em;
+  text-align: center;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  margin-left: -25px;
+  background-color: #999999;
+  z-index: 100;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+
+.timeline-badge.primary {
+  background-color: #2e6da4 !important;
+}
+
+.timeline-badge.success {
+  background-color: #3f903f !important;
+}
+
+.timeline-badge.warning {
+  background-color: #f0ad4e !important;
+}
+
+.timeline-badge.danger {
+  background-color: #d9534f !important;
+}
+
+.timeline-badge.info {
+  background-color: #5bc0de !important;
+}
+
+.timeline-title {
+  margin-top: 0;
+  color: inherit;
+}
+
+.timeline-body > p,
+.timeline-body > ul {
+  margin-bottom: 0;
+}
+
+.timeline-body > p + p {
+  margin-top: 5px;
+}
+#education {
+    height: 25px;
+    width: 100%;
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+/*#education {
+    width: 100%;
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 4em;
+    font-weight: bolder;
+    font-family: 'Gloria', cursive;
+    color: gray;
+}*/
+
+/* SKILLS */
+
+#main {
+    background-color: #247429;
+    width: 100%;
+    padding-bottom: 0px;
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+.wrapper {
+    max-width: 100%; /* Full width */
+    background-color: grey; /* Grey background */
+}
+.liste {
+    width: 80%;
+    background-color: aliceblue;
+    height: 50%;
+    margin-left: 10%;
+}
+.skills {
+    text-align: right; /* Right-align text */
+    padding-right: 20px; /* Add some right padding */
+    line-height: 15px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
+    color: white; /* White text color */
+}
+
+.html {width: 90%; background-color: #fde496;} /* Green */
+.css {width: 70%; background-color: #2196F3;} /* Blue */
+.js {width: 60%; background-color: #f44336;} /* Red */
+.communication {width: 90%; background-color: #4CAF50;} /* Dark Grey */
+.teamwork {width: 70%; background-color: #2196F3;} /* Dark Grey */
+.creativity {width: 60%; background-color: #f44336;} /* Dark Grey */
+.dedication {width: 60%; background-color: #4CAF50;} /* Dark Grey */
+.analytics {width: 70%; background-color: #2196F3;} /* Dark Grey */
+.MO {width: 80%; background-color: #f44336;} /* Dark Grey */
+
+#personal, #prof, #software { 
+    break-before: column;
+    -webkit-column-break-before: always;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.liste {
+    width: 100%;
+    background-color: #247429;
+    border: none;
+    padding: 20px;
+    margin-left: 0%;
+    margin-right: 0%;
+    display: block;
+    width: %;
+    -webkit-column-count:3; /* Opera, Safari, Google Chrome */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3; /* Internet Explorer */
+}
+.prof, .personal, .software {
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* INTERESTS */
+
+#interests {
+    width: 100%;
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+}
+.grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    box-shadow: 2px 2px 6px black;
+}
+.grid-item {
+  background-color: #4F5861;
+  color: white;
+  border: 1px solid #4F5861;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.icon {
+    width: 100px;
+    border: 3px solid white;
+    margin: 10px;
+    background-color: #4F5861;
+}
+
+/* FORM */
+
+#form {
+    grid-column: 2 / 3;
+    grid-row: 6 / 7;
+}
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.main_contact {
+    border-radius: 5px;
+    background-color: darkslategrey;
+    padding: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+#contact_me {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+/* FOOTER */
+
+footer {
+    grid-column: 2 / 3;
+    grid-row: 7 / 8; 
+}
